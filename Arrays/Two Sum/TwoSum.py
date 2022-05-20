@@ -1,3 +1,5 @@
+# Array Problem
+
 # Given array of nums, return the index position of the 2 nos that add upto the target value.
 # Brute force solution is just using array, can end up with O(n2) soln.
 # Better method is to use a Dictionary, using which we get O(n). But space complexity also becomes O(n).

@@ -38,7 +38,8 @@ class Solution:
                     while left < right and nums[right] == nums[right-1]:#7
                         right -= 1    #8
                 
-                    right -= 1 #9 #Once we have found the right result, we can change the pointer values of both left and right
+                    right -= 1 #9 #Once we have found the right result, we can change the pointer values of both left and right.
+                    # That is skip the current characters since they are already in the result array
                     left += 1 #10
 
 

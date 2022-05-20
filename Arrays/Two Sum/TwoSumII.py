@@ -1,3 +1,5 @@
+# Array Problem
+
 # Same as Two Sum problem. But here the array is sorted in non-decreasing (increasing) order.
 # Also the array is 1-indexed, meaning the index starts from 1, and not 0.
 # The returned indices must be in increasing order as well. Same number cannot be used twice.
