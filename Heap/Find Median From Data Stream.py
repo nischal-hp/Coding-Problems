@@ -32,9 +32,12 @@
 # There will be at least one element in the data structure before calling findMedian.
 # At most 5 * 10^4 calls will be made to addNum and findMedian.
 
-# Solution 1 : Brute Force O(n) time and space
+# Solution 1 : Brute Force O(n) or O(nlogn) time
 # Maintain a single ordered list, which has the elements in order.
 # When we have to find the median, it becomes easy, as we can exract out the 2 middle elements.
+
+# Or just maintain a list, insert into it, and sort it everytime after insertion. Maybe insertion sort can be used here,
+# as it is an online algorithm.
 
 # Solution 2 : O(logn) Using 2 heaps - maxHeap and minHeap
 # Inserting or Removing element from a heap is O(logn).
