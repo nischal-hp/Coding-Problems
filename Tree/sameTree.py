@@ -61,13 +61,13 @@ class Solution:
                 return False
             return True
         
-        deq = deque([(p, q),])
+        deq = deque([(p, q)])
         while deq:
             p, q = deq.popleft()
             if not check(p, q):
                 return False
             
-            if p:   # Check Done so that we don't append when it is None                            
+            if p and q:   # Check Done so that we don't append when it is None                            
                 deq.append((p.left, q.left))
                 deq.append((p.right, q.right))
                     

@@ -35,7 +35,7 @@ class Solution:
             node = stack.pop()
             if node:
                 node.left, node.right = node.right, node.left
-                stack.extend([node.right, node.left])   # IMP : Make sure to append in reverse order
+                stack.extend([node.left, node.right]) 
         return root
 
 # Solution 3 : Iterative. BFS approach using queue
