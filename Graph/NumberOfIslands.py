@@ -29,6 +29,31 @@
 # grid[i][j] is '0' or '1'
 
 # Solution 1 : O(m*n) time and space
+# We can sink the island by setting 1 to 0, so that we don't end up visiting the already visited island.
+# This solution modifies the original array, but does not use any additional space like in Solution 2, which uses a set to maintain the already visited element.
+class Solution:
+    # O(m*n) solution
+    def numIslands(self, grid: List[List[str]]) -> int:
+        ROWS, COLS = len(grid),len(grid[0])
+        count=0
+        
+        def dfs(i,j):
+            if i<0 or j<0 or i>=len(grid) or j>=len(grid[0]) or grid[i][j]=='0':
+                return
+            grid[i][j]='0'
+            dfs(i+1,j)
+            dfs(i-1,j)
+            dfs(i,j+1)
+            dfs(i,j-1)
+        
+        for r in range(ROWS):
+            for c in range(COLS):
+                if grid[r][c]=="1":
+                    count+=1
+                    dfs(r,c)
+        return count
+
+# Solution 2 : O(m*n) time and space
 # This problem is very similar to PacificAtlanticWaterFlow problem. Similar approach is followed here.
 # A single hash set is enough here, to mark the visited cells.
 
@@ -55,4 +80,3 @@ class Solution:
                     noOfIslands+=1
                     dfs(r,c)
         return noOfIslands
-        
